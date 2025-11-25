@@ -1,0 +1,8 @@
+This is a recreational project, that was made just for my personal enjoyment and learning. The code creates a chess game where you can play with someone or with a bot opponent that uses the minimax algorithm with alpha-beta pruning to make intelligent moves. The bot evaluates board positions by calculating the total point value of pieces on the board, and searches through possible future moves to find the best one. The project includes a web interface where you can play against the bot, and the bot can play as either white or black pieces.
+
+The minimax algorithm with alpha-beta pruning works by exploring a tree of possible moves up to a certain depth (currently 5 moves ahead), evaluating each position, and choosing the move that maximizes the bot's advantage while minimizing the opponent's advantage. Alpha-beta pruning optimizes this process by cutting off branches that won't affect the final decision, making the search much faster.
+
+For the learning of the algorithm, no machine learning libraries, such as TensorFlow or PyTorch, were used. The only libraries utilized were the following: Flask (for the backend API), flask-cors (for CORS handling), and standard Python libraries (random, math, copy, os, time).
+
+To test the project you need to have Python installed with Flask and flask-cors. First, navigate to the backend folder and run "main.py" to start the Flask server. Then, open the "index.html" file from the frontend folder in a web browser. You can load a game, make moves by clicking on pieces and their valid destinations, and toggle the bot to play as white or black. The bot will automatically make its move when it's its turn.
+
