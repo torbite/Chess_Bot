@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Botsie</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Chess Botsie</h1>
+        <p class="app__subtitle">Play against a friend using the backend API.</p>
+      </header>
+
+      <section class="controls">
+        <div class="controls__group controls__group--readonly">
+          <label>Backend URL</label>
+          <span class="controls__static-value">http://127.0.0.1:8000</span>
+        </div>
+        <div class="controls__group">
+          <label for="match-name">Match Name</label>
+          <input
+            id="match-name"
+            type="text"
+            placeholder="default"
+            autocomplete="off"
+          />
+        </div>
+        <div class="controls__buttons">
+          <button id="load-game" type="button">Load Game</button>
+          <button id="refresh-game" type="button">Refresh</button>
+        </div>
+        <div class="controls__toggles">
+          <label class="controls__toggle">
+            <input id="bot-white-toggle" type="checkbox" />
+            <span>Bot plays White</span>
+          </label>
+          <label class="controls__toggle">
+            <input id="bot-black-toggle" type="checkbox" />
+            <span>Bot plays Black</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="status-bar">
+        <div class="status-bar__item">
+          <span class="status-bar__label">Turn:</span>
+          <span id="turn-indicator" class="status-bar__value">—</span>
+        </div>
+        <div class="status-bar__item">
+          <span class="status-bar__label">Selected:</span>
+          <span id="selected-indicator" class="status-bar__value">—</span>
+        </div>
+      </section>
+
+      <section class="board-wrapper">
+        <div id="board" class="board" aria-label="Chessboard"></div>
+        <div class="board__legend board__legend--files">
+          <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+        </div>
+        <div class="board__legend board__legend--ranks">
+          <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+        </div>
+      </section>
+
+      <section class="messages">
+        <p id="message-area">Load a game to get started.</p>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
