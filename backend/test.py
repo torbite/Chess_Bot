@@ -1,6 +1,0 @@
-bit1 = 0b1001
-bit2 = 0b10101
-
-COLOUR_BITS = 0b11000
-PIECES_BITS = 0b111
-print(bin(bit1 & PIECES_BITS))
